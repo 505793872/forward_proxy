@@ -1,0 +1,42 @@
+{
+	"hosts": {
+		"dns.google": "8.8.8.8",
+		"geosite:category-ads-all": [
+			"127.0.0.1",
+			"::1"
+		]
+	},
+	"servers":[
+		"https://1.1.1.1/dns-query",
+		"https://dns.google/dns-query",
+		{
+			"address": "223.5.5.5",
+			"port": 5353,
+			"clientIp": "124.127.244.11",
+			"skipFallback": true,
+			"domains": ["geosite:cn"],
+			"expectIPs": ["geoip:cn"]
+		},
+		{
+			"address": "fakedns",
+			"domains": [
+				"domain:v2fly.org",
+				"geosite:geolocation-!cn"
+			]
+		},
+		{
+			"address": "https://1.1.1.1/dns-query",
+			"domains": [
+				"domain:v2fly.org",
+				"geosite:geolocation-!cn"
+			],
+			"expectIPs": ["geoip:!cn"]
+		},
+		"localhost"
+	],
+	"clientIp": "124.127.244.11",
+	"queryStrategy": "UseIP",
+	"disableCache": true,
+	"disableFallback": true,
+	"tag": "dns_inbound"
+}

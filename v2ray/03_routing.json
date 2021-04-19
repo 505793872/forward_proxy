@@ -1,0 +1,46 @@
+{
+	"domainStrategy": "AsIs",
+	"domainMatcher": "mph",
+	"rules": [
+		{
+			"domainMatcher": "mph",
+			"type": "field",
+			"domain": [
+				"baidu.com",
+				"qq.com",
+				"geosite:cn"
+			],
+			"ip": [
+				"0.0.0.0/8",
+				"10.0.0.0/8",
+				"fc00::/7",
+				"fe80::/10",
+				"geoip:cn",
+				"geoip:!cn"
+			],
+			"port": "53,443,1000-2000",
+			"sourcePort": "53,443,1000-2000",
+			"network": "tcp",
+			"source": ["10.0.0.1"],
+			"user": [
+				"love@v2ray.com"
+			],
+			"inboundTag": [
+				"tag-vmess"
+			],
+			"protocol": [
+				"http",
+				"tls",
+				"bittorrent"
+			],
+			"outboundTag": "direct",
+			"balancerTag": "balancer"
+		}
+	],
+	"balancers": [
+		{
+			"tag": "balancer",
+			"selector": []
+		}
+	]
+}

@@ -1,0 +1,9 @@
+{
+	"tcpSettings": {},
+    "kcpSettings": {},
+    "wsSettings": {},
+    "httpSettings": {},
+    "quicSettings": {},
+    "dsSettings": {},
+    "grpcSettings": {}
+}

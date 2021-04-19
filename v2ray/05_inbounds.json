@@ -1,0 +1,58 @@
+{
+	"listen": "0.0.0.0",
+	"port": 1080,
+	"protocol": "VMess",
+	"settings": {
+		"clients": [
+			{
+				"id": "27848739-7e62-4138-9fd3-098a63964b6b",
+				"level": 0,
+				"alterId": 0,
+				"email": "love@v2ray.com"
+			}
+		],
+		"disableInsecureEncryption": true
+	},
+	"streamSettings": {
+		"network": "tcp",
+		"security": "none",
+		"tlsSettings": {},
+		"tcpSettings": {
+			"acceptProxyProtocol": false,
+			"header": {
+				"type": "none"
+			}
+		},
+		"kcpSettings": {},
+		"wsSettings": {},
+		"httpSettings": {},
+		"quicSettings": {},
+		"dsSettings": {},
+		"sockopt": {
+			"mark": 0,
+			"tcpFastOpen": true,
+			"tproxy": "tproxy"
+		}
+	},
+	"tag": "inboundTag",
+	"sniffing": {
+		"enabled": true,
+		"destOverride": [
+			"http",
+			"tls"
+		],
+		"metadataOnly": false
+	}
+},
+{
+	"protocol": "dokodemo-door",
+	{
+		"address": "8.8.8.8",
+		"port": 53,
+		"network": "tcp",
+		"timeout": 0,
+		"followRedirect": false,
+		"userLevel": 0
+	}	
+}
+

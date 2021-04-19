@@ -1,0 +1,37 @@
+{
+	"sendThrough": "0.0.0.0",
+	"protocol": "VMess",
+	"settings": {
+		"vnext": [
+			{
+				"address": "127.0.0.1",
+				"port": 37192,
+				"users": [
+					{
+						"id": "27848739-7e62-4138-9fd3-098a63964b6b",
+						"alterId": 0,
+						"security": "auto",
+						"level": 0
+					}
+				]
+			}
+		]
+	},
+	"tag": "outboundTag",
+	"streamSettings": {
+		"network": "tcp",
+		"security": "none",
+	    "tlsSettings": {},
+	    "tcpSettings": {},
+	    "kcpSettings": {},
+	    "wsSettings": {},
+	    "httpSettings": {},
+	    "quicSettings": {},
+	    "dsSettings": {},
+	    "sockopt": {
+			"mark": 0,
+			"tcpFastOpen": false,
+			"tproxy": "off"
+		}
+	}
+}
